@@ -1,0 +1,40 @@
+
+
+.wrapper{
+    background-color: rgb(250,250,250);
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 0px auto;
+    width: 100%;
+    height: 100vh;   /* bewirkt, dass der wrapper immer den ganzen Bildschirm einnimmt und somit eine Lücke zum Header entsteht, wenn der Content klein ist*/
+}
+
+header{
+    background-color: red;
+}
+
+.content{ /* flex item together with header and footer, the parent is wrapper*/
+    flex: 1 0 auto;  /* füllt den Platz zwischen content und footer auf*/
+    background-color: yellow;
+}
+
+.contentWrapper{   /* flex parent for main and aside*/
+    display: flex;
+    flex-flow: row wrap;
+}
+
+main{
+    background-color: green;
+    flex: 7 7 70%;
+}
+
+aside{
+    background-color: greenyellow;
+    flex: 3 3 30%;
+}
+
+footer{
+    background-color: black;
+    color: rgb(255,255,255);
+    height: 150px;
+}
