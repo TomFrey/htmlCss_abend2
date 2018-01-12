@@ -12,14 +12,17 @@
 header{
     background-color: red;
 }
-
-.content{ /* flex item together with header and footer, the parent is wrapper*/
-    flex: 1 0 auto;  /* füllt den Platz zwischen content und footer auf*/
-    background-color: yellow;
-}
+/*
+.content{ /* flex item together with header and footer, the parent is .wrapper*/
+  /*  flex: 1 0 auto;  /* füllt den Platz zwischen content und footer auf*/
+  /*  background-color: yellow;
+}*/
 
 .contentWrapper{   /* flex parent for main and aside*/
-    display: flex;
+    flex: 1 0 auto;  /* füllt den Platz zwischen content und footer auf / ist ein Item von .wrapper*/
+    background-color: yellow;
+
+    display: flex;  /* und ist auch das Parent von main und aside (ein Element kann, so scheint es, Parent und Item sein) */
     flex-flow: row wrap;
 }
 
